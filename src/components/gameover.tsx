@@ -1,7 +1,10 @@
+interface GameProps{
+    winner: string;
+}
 
-
-export default function GameOver(winner){
-    if(winner.winner == 'M'){
+export const GameOver : React.FC<GameProps> = ({winner}) => {
+    console.log(winner);
+    if(winner == 'M'){
         return (<div></div>);
     }
     else 
@@ -12,7 +15,7 @@ export default function GameOver(winner){
             <div className="bg-white rounded-xl w-[70vw] h-[50vh] flex flex-col justify-center items-center gap-[50px]">
 
                 <h1 className="autour-one-regular text-7xl text-[#80a797] text-center">
-                    {(winner.winner == "D") ? "It's a draw!" : winner.winner + " wins  the game!"}
+                    {(winner == "D") ? "It's a draw!" : winner + " wins  the game!"}
                 </h1>
 
                 <button className="rounded-md shadows-into-light-regular bg-[#ee7f68] p-2 text-[#fff9f2] text-4xl w-[150px]" onClick={refreshPage}>

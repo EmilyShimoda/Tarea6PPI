@@ -1,6 +1,10 @@
 import clsx from "clsx";
-
-export default function Square (value: string, onSquareclick = ()=>{}){
+interface SquareProps {
+    value: string;  
+    onSquareClick: () => void; 
+}
+  
+export const Square: React.FC<SquareProps> = ({ value, onSquareClick }) => {
     return <button className={
         clsx("text-8xl border-[1px] border-[#c8e9db] size-32 bg-white cherry-bomb-one-regular", 
             {
@@ -8,7 +12,7 @@ export default function Square (value: string, onSquareclick = ()=>{}){
                 "text-[#fabe9c]" : value == "X",
                 "text-[#e0e098]" : value == "O"
             }
-        )} onClick={onSquareclick}> 
+        )} onClick={onSquareClick}> 
         {value} 
     </button>;
 }

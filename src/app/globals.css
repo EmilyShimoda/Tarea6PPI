@@ -1,6 +1,12 @@
+@import '@fontsource/cherry-bomb-one';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @import @font-face{
+  font-family: "Cherry Bomb One", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
+} */
 
 .cherry-bomb-one-regular {
   font-family: "Cherry Bomb One", serif;
