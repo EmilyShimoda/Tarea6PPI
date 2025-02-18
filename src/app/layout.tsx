@@ -1,15 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cherry_Bomb_One, Modak, Shadows_Into_Light, Autour_One } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const cherryBomb = Cherry_Bomb_One({
+  variable: "--font-cherry-bomb-one",
   subsets: ["latin"],
+  weight: "400"
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const modak = Modak({
+  variable: "--font-modak",
   subsets: ["latin"],
+  weight: "400"
+});
+
+export const shawdowsIntoLight = Shadows_Into_Light({
+  variable: "--font-shadows-into-light",
+  subsets: ["latin"],
+  weight: "400"
+});
+
+export const autourOne = Autour_One({
+  variable: "--font-autour-one",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
